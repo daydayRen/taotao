@@ -1,0 +1,13 @@
+package it.base;
+
+import java.util.Scanner;
+
+public class FJ {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println(sc.nextInt());
+
+	}
+	static String cal(int n);
+}

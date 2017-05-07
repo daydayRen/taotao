@@ -1,0 +1,22 @@
+package cn.demo.ssm.action;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import cn.demo.ssm.service.UserService;
+
+@Controller
+@RequestMapping("/user")
+public class UserAction {
+	@Autowired
+	private UserService userService;
+	
+	public String queryUser(Model model,Integer id)throws Exception{
+		
+		User user=userService.findUserById(17);
+		model.addAttribute("user",user);
+		return "queryUser";
+	}
+}

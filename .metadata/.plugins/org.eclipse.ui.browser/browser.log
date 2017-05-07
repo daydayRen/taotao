@@ -1,0 +1,10 @@
+
+4月 17, 2017 12:03:38.01 NEW SESSION
+4月 17, 2017 12:03:38.01 [7416:4876:0417/120338:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -100
+
+4月 21, 2017 17:04:20.06 NEW SESSION
+4月 21, 2017 17:04:20.06 [3408:7204:0421/170420.063:ERROR:default_component_installer.cc(276)] Failed to read manifest or verify installation for Adobe Flash Player (C:\Users\oneday\AppData\Local\Google\Chrome\User Data\PepperFlash\25.0.0.148).: 操作成功完成。 (0x0)
+4月 21, 2017 17:04:22.33 [7192:7196:0421/170422.335:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+4月 21, 2017 17:04:22.75 [7192:7196:0421/170422.753:ERROR:mf_helpers.cc(12)] Error in dxva_video_decode_accelerator_win.cc on line 477
+4月 21, 2017 17:14:04.74 [8120:8112:0421/171404.748:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+4月 21, 2017 17:14:04.76 [8120:8112:0421/171404.769:ERROR:mf_helpers.cc(12)] Error in dxva_video_decode_accelerator_win.cc on line 477

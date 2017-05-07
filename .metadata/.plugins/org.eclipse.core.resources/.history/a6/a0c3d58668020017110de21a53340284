@@ -1,0 +1,66 @@
+package it.base;
+
+import java.util.Scanner;
+
+public class WanMei {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		while(sc.hasNext()){
+			int n=Integer.parseInt(sc.nextLine());
+			String str=sc.nextLine();
+			char[] chs=str.toCharArray();
+			int[] count=new int[26];
+			char ch='0';
+			int oldch=0;
+			for(int j=0;j<chs.length;j++){
+				int index=chs[j]-'a';
+				count[index]++;
+			}
+			for(int j=0;j<26;j++){
+				if(count[j]%2!=0){
+					oldch++;
+					ch=(char) (j+'a');
+				}
+					
+			}
+			if(oldch>1)
+				System.out.println("Impossible");
+			else
+				System.out.println(exchage(chs, n, ch));
+		}
+
+	}
+	
+	private static int exchage(char[] ch1,int n,char ch){
+		int sum=0,i,j,k;
+		for(i=0;i<n/2;i++){
+			if(ch1[i]==ch){
+				for(j=i;j<n-1-i;j++){
+					if(ch1[j]==ch1[n-i-1])
+						break;
+				}
+				sum+=j-i;
+				for(k=j;k>i;k--){
+					ch1[k]=ch1[k-1];
+				}
+				ch1[i]=ch1[n-1-i];
+			}else{
+				for(j=n-i-1;j<i;j--){
+					if(ch1[j]==ch1[i])
+						break;
+				}
+				
+				sum+=n-1-j-i;
+				for(k=j;k<n-1-i;k++){
+					ch1[k]=ch1[k+1];
+				}
+				ch1[n-1-i]=ch1[i];
+			}
+			
+			
+		}
+		return sum;
+	}
+
+}

@@ -1,0 +1,27 @@
+package cyclic;
+
+public class CubeNum {
+	public static int cute(int i){
+		int j[]=new int[3] ;
+		int t=0;
+		int sum = 0;
+		if(i>0){
+			j[t++]=i%10;
+			i/=10;
+			System.out.println(j[t]);
+		}
+		for(int h=0;h<j.length;h++){
+			sum+=Math.pow(j[h], 3);
+		}
+		return sum;
+		
+	}
+	public static void main(String[] args) {
+		int sum=0;
+		System.out.println(cute(100));
+		for(int i=100;i<1000;i++){
+			
+		}
+	}
+
+}

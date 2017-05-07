@@ -1,0 +1,21 @@
+package it.base;
+
+import java.util.Scanner;
+
+public class WanMei {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		while(sc.hasNext()){
+			int n=Integer.parseInt(sc.nextLine());
+			
+		}
+
+	}
+	
+	private static int exchage(char[] ch,int n,char ch){
+		int sum=0;
+		return sum;
+	}
+
+}

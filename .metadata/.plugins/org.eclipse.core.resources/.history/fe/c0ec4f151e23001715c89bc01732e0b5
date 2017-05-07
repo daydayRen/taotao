@@ -1,0 +1,5 @@
+NotEmpty.employee.lastName=LastName\u4E0D\u80FD\u4E3A\u7A7A.
+Email.employee.email=Email\u683C\u5F0F\u4E0D\u6B63\u786E
+Past.emaployee.birth=birth\u53EA\u80FD\u4F7F\u7528\u8FC7\u53BB\u65F6\u95F4
+
+typeMismatch.employee.birth=Birth\u683C\u5F0F\u4E0D\u6B63\u786E

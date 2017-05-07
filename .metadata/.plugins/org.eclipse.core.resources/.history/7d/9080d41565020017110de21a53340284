@@ -1,0 +1,32 @@
+package it.base;
+
+import java.util.Scanner;
+
+public class WanMei {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		while(sc.hasNext()){
+			int n=Integer.parseInt(sc.nextLine());
+			
+		}
+
+	}
+	
+	private static int exchage(char[] ch1,int n,char ch){
+		int sum=0,i,j,k;
+		for(i=0;i<n/2;i++){
+			if(ch1[i]==ch){
+				for(j=i;j<n-1-i;j++){
+					if(ch1[j]==ch1[n-i-1])
+						break;
+				}
+				sum+=j-i;
+			}
+			
+			
+		}
+		return sum;
+	}
+
+}

@@ -1,0 +1,16 @@
+package it.springmvc.converters;
+
+
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Controller;
+
+
+import it.springmvc.pojo.Employee;
+
+@Controller
+public class EmployeeConverter implements Converter<String,Employee> {
+ @Override
+ public Employee convert(String sourse){
+	 return null;
+ }
+}

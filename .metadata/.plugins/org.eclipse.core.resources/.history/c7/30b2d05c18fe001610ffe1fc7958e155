@@ -1,0 +1,27 @@
+package it.base;
+
+public class Test {
+
+	public static void main(String[] args) {
+		int [] src=new int[]{1,2,3,4,5,6,7,8,9,10};
+
+		int [] dest=new int[6];
+
+		System.arraycopy(src, 2, dest, 5, 1);
+
+		//从src中的第2个位置到dest的第5个位置;总数为1个
+
+		dest=Arrays.copyOfRange(src, 2, 4);
+
+		//从src中的第2个位置到第4个位置;总数为2个 2=obj<4
+
+		for(int value:dest){
+
+			
+
+			System.out.println(value);
+
+		}
+	}
+
+}

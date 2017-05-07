@@ -1,0 +1,15 @@
+package it.springmvc.converters;
+
+import org.springframework.cglib.core.Converter;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import it.springmvc.pojo.Employee;
+
+@Controller
+public class EmployeeConverter implements Converter {
+ @Override
+ public Employee convert(String sourse){
+	 
+ }
+}

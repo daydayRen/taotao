@@ -1,0 +1,20 @@
+package it.base;
+
+
+public class Calculator {
+	public static void main(String[] args) {
+		
+	}
+	private int Calc(int op1,int op2,char op){
+		switch (op) {
+		case '+':return op2+op1;
+		case '-':return op2-op1;
+		case '*':return op2*op1;
+		case '/':
+			if(op1!=0)return op2/op1;
+			else return 0;
+		default:
+			return 0;
+		}
+	}
+}

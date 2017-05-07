@@ -1,0 +1,47 @@
+package it.base;
+
+import java.util.Scanner;
+
+
+public class RuXueKaoShi{
+
+	static int W ;
+	static int[] w_arr ;
+	static int[] p_arr ;
+	static int[][] v;
+
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		String[] sarr=scanner.nextLine().split(" ");
+		W=Integer.parseInt(sarr[0]);
+		w_arr=new int[Integer.parseInt(sarr[1])];
+		p_arr=new int[w_arr.length];
+		
+		for(int i=0;i<w_arr.length;i++)
+		{
+			sarr=scanner.nextLine().split(" ");
+			w_arr[i]=Integer.parseInt(sarr[0]);
+			p_arr[i]=Integer.parseInt(sarr[1]);
+		}
+
+		k();
+	}
+	
+
+	static void k()
+	{
+		int[] b=new int[W+1];
+		for(int i=0;i<w_arr.length;i++)
+		{
+			for(int j=W;j>=w_arr[i];j--)
+			{
+				//b[j]= Math.max(b[j], b[j-w_arr[i]]+p_arr[i]);
+				if(b[j-w_arr[i]]+p_arr[i]>b[j])
+				{
+					b[j] =b[j-w_arr[i]]+p_arr[i];
+				}
+			}
+		}
+		System.out.println(b[W]);//max
+	}
+}

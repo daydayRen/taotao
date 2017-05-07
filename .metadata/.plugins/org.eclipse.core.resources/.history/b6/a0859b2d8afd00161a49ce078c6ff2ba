@@ -1,0 +1,142 @@
+package it.base;
+
+import java.util.Stack;
+
+public class Calculator {
+	public static void main(String[] args) throws Exception {
+		Calculator c=new Calculator();
+		Integer i=1;
+		System.out.println(i);
+		System.out.println(c.getResult("2").intValue());
+	}
+	
+	//获取结果
+	public Integer getResult(String infix) throws Exception{
+		StringBuffer suffix=new StringBuffer();
+		InfixToSuffix(infix, suffix);
+		return Suffix(suffix.toString());		
+	}
+
+	//后缀表达式计算值
+	private Integer Suffix(String suffix){
+		Stack<Integer> s=new Stack<>();
+		int len=suffix.length();
+		int result=0;//储存结果
+		StringBuffer temp=new StringBuffer();
+		for(int i=0;i<len;i++){
+			if(IsDigit(suffix.charAt(i))){
+				temp.append(suffix).charAt(i);
+				
+				}
+			else if(suffix.charAt(i)==' '){
+				if(temp.length()>0){
+					s.push(Integer.valueOf(temp.toString()));
+					temp.setLength(0);
+				}
+			}else if(IsOperator(suffix.charAt(i))){
+				if(temp.length()>0){
+					s.push(Integer.valueOf(temp.toString()));
+					temp.setLength(0);
+				}
+				int op1=s.peek();
+				s.pop();
+				int op2=s.peek();
+				s.pop();
+				result=Calc(op1, op2, suffix.charAt(i));
+				s.push(result);
+			}
+		}
+		return s.peek();
+	}
+	//中缀转后缀
+	private void InfixToSuffix(String infix, StringBuffer suffix) throws Exception {
+		Stack<Character> s=new Stack<>();
+		int len=infix.length();
+		for(int i=0;i<len;i++){
+			if(infix.charAt(i)==' ')
+				continue;
+			else if(IsDigit(infix.charAt(i)))
+				suffix.append(infix).charAt(i);
+			else if(infix.charAt(i)=='(')
+				s.push(infix.charAt(i));
+			else if(infix.charAt(i)==')'){
+				while(s.peek()!='('){
+					suffix.append(s.peek());
+					s.pop();
+				}
+				s.pop();
+			}
+			else if(infix.charAt(i)=='+'||infix.charAt(i)=='+'){
+				suffix.append(' ');
+				if(s.isEmpty()||s.peek()=='('){
+					s.push(infix.charAt(i));
+				}else{
+					do{
+						suffix.append(s.peek());
+						s.pop();
+						
+					}while(!s.empty()&&s.peek()!=')');
+					s.push(infix.charAt(i));
+				}
+			}
+			else if(infix.charAt(i) == '*' || infix.charAt(i) == '/'){
+				suffix.append(' ');
+				if(GetPriority(s.peek(), infix.charAt(i))==1){
+					s.push(infix.charAt(i));
+				}else{
+					while (!s.empty() && (GetPriority(s.peek(), infix.charAt(i)) < 1) && s.peek() != '(') {
+						suffix.append(s.peek());
+						s.pop();
+					}
+					s.push(infix.charAt(i));
+				}
+			}
+		}
+		
+		while(!s.empty()){
+			suffix.append(s.peek());
+			s.pop();
+		}
+	}
+	
+	
+	//比较运算符优先级 -1表示小于  0表示等于   1表示大于
+	private int GetPriority(char op1,char op2)throws Exception{
+		if((op1=='+'||op1=='-')&&(op2=='-'||op2=='+')){
+			return 0;
+		}else if(op1==op2)
+			return 0;
+		else if((op1=='+'||op1=='-')&&(op2=='*'||op2=='/'))
+			return 1;
+		else if((op1=='*'||op1=='/')&&(op2=='-'||op2=='+'))
+			return -1;
+		else if ((op1=='*'||op1=='/')&&(op2=='*'||op2=='/')&&op1!=op2)
+			return 0;
+		else 
+		 throw new Exception("两个运算符优先级未定义.");
+	}
+	
+	//判断是否是数字
+		private boolean IsDigit(char ch) {									  
+			return (ch >= '0' && ch <= '9') || ch == '.' ? true : false;
+		}
+		
+		//判断是否是操作符	
+		private boolean IsOperator(char ch) {									
+			return ch == '+' || ch == '-' || ch == '*' || ch == '/' ? true : false;
+	}
+	
+	//根据运算符计算
+	private int Calc(int op1,int op2,char op){
+		switch (op) {
+		case '+':return op2+op1;
+		case '-':return op2-op1;
+		case '*':return op2*op1;
+		case '/':
+			if(op1!=0)return op2/op1;
+			else return 0;
+		default:
+			return 0;
+		}
+	}
+}
