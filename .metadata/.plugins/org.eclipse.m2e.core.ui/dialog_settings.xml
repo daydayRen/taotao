@@ -24,8 +24,10 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
-			<item value="E:\eclipseworkspase\Servers"/>
+			<item value="E:\eclipseworkspase\generatorSqlmapCustom"/>
 			<item value="E:\eclipseworkspase\taotao-common"/>
+			<item value="E:\eclipseworkspase\taotao-rest"/>
+			<item value="E:\eclipseworkspase\Servers"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -94,13 +96,8 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="taotao-sso"/>
 			<item value="taotao-parent"/>
-			<item value="taotao-manager-web"/>
-			<item value="taotao-manager"/>
-			<item value="taotao-manager-service"/>
-			<item value="taotao-manager-mapper"/>
-			<item value="taotao-manager-pojo"/>
-			<item value="taotao-common"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

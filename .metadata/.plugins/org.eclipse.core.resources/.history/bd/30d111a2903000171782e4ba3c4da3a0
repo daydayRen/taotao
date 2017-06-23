@@ -1,7 +1,0 @@
-package com.taotao.service.imp;
-
-import com.taotao.service.ItemService;
-
-public class ItemServiceimp implements ItemService {
-
-}

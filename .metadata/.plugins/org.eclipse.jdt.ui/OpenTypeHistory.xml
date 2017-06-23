@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=taotao-manager-service/src\/main\/java&lt;com.taotao.service{ItemService.java[ItemService" modifiers="513" timestamp="1493878596820"/>
+<typeInfo handle="=taotao-manager-service/src\/main\/java&lt;com.taotao.service{ItemService.java[ItemService" modifiers="513" timestamp="1494934138693"/>
 <typeInfo handle="=taotao-manager-service/D:\/jdk\/jdk1.7.0_79_x86\/jre\/lib\/rt.jar&lt;java.awt.event(ItemListener.class[ItemListener" modifiers="1537" timestamp="1456792698000"/>
+<typeInfo handle="=taotao-manager-service/src\/main\/java&lt;com.taotao.service{ItemCatService.java[ItemCatService" modifiers="513" timestamp="1494251477449"/>
+<typeInfo handle="=taotao-manager-service/src\/main\/java&lt;com.taotao.service{PictureService.java[PictureService" modifiers="513" timestamp="1494422084066"/>
+<typeInfo handle="=taotao-manager-service/src\/main\/java&lt;com.taotao.service{ItemParamService.java[ItemParamService" modifiers="513" timestamp="1494922775288"/>
+<typeInfo handle="=taotao-manager-service/src\/main\/java&lt;com.taotao.service{ItemParamItemService.java[ItemParamItemService" modifiers="513" timestamp="1494935100011"/>
+<typeInfo handle="=taotao-manager-service/src\/main\/java&lt;com.taotao.service{ContentService.java[ContentService" modifiers="513" timestamp="1495412804205"/>
+<typeInfo handle="=taotao-rest/src\/main\/java&lt;com.taotao.rest.service{ContentService.java[ContentService" modifiers="513" timestamp="1496192895645"/>
+<typeInfo handle="=taotao-portal/src\/main\/java&lt;com.taotao.portal.service{ContentService.java[ContentService" modifiers="513" timestamp="1495454851833"/>
+<typeInfo handle="=taotao-rest/C:\/Users\/oneday\/.m2\/repository\/redis\/clients\/jedis\/2.7.2\/jedis-2.7.2.jar&lt;redis.clients.jedis(RedisPipeline.class[RedisPipeline" modifiers="1537" timestamp="1437286372266"/>
+<typeInfo handle="=taotao-rest/src\/main\/java&lt;com.taotao.rest.service{RedisService.java[RedisService" modifiers="513" timestamp="1496190885633"/>
+<typeInfo handle="=taotao-search/src\/main\/java&lt;com.taotao.search.service{ItemService.java[ItemService" modifiers="513" timestamp="1496279047378"/>
+<typeInfo handle="=taotao-search/src\/main\/java&lt;com.taotao.search.dao{SearchDao.java[SearchDao" modifiers="513" timestamp="1496316140415"/>
+<typeInfo handle="=taotao-search/src\/main\/java&lt;com.taotao.search.service{SearchService.java[SearchService" modifiers="513" timestamp="1496314724921"/>
+<typeInfo handle="=taotao-portal/src\/main\/java&lt;com.taotao.portal.service{SearchService.java[SearchService" modifiers="513" timestamp="1496500021759"/>
+<typeInfo handle="=taotao-rest/src\/main\/java&lt;com.taotao.rest.service{ItemService.java[ItemService" modifiers="513" timestamp="1496564839854"/>
+<typeInfo handle="=taotao-manager-pojo/src\/main\/java&lt;com.taotao.pojo{TbItem.java[TbItem" modifiers="1" timestamp="1493857106728"/>
+<typeInfo handle="=taotao-portal/src\/main\/java&lt;com.taotao.portal.service{ItemService.java[ItemService" modifiers="513" timestamp="1496572028334"/>
+<typeInfo handle="=taotao-sso/src\/main\/java&lt;com.taotao.sso.service{UserService.java[UserService" modifiers="513" timestamp="1496755727184"/>
+<typeInfo handle="=taotao-portal/src\/main\/java&lt;com.taotao.portal.service{CartService.java[CartService" modifiers="513" timestamp="1497367230969"/>
 </typeInfoHistroy>
